@@ -1,6 +1,8 @@
 <img src="imgs/FUCK.png" alt="logo" width="40%" height="40%" align="right" />
 
-# 化学元素拼接牌
+# ChemElemSplice
+
+化学元素拼接器
 
 ## Usage
 
