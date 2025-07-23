@@ -33,7 +33,9 @@ const getSymbolName = () => orderedElements.value.map(e => e.symbol).join('');
 
 const exportPNG = async () => {
   if (tableRef.value) {
-    const canvas = await html2canvas(tableRef.value);
+    const canvas = await html2canvas(tableRef.value, {
+      scale: 2, // 控制清晰度
+    });
     const link = document.createElement('a');
     link.href = canvas.toDataURL('image/png');
     link.download = getSymbolName() + '.png';
