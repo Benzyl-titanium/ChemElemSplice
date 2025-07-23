@@ -126,5 +126,4 @@ export const elements: Element[] = [
   { symbol: "Og", name: "Oganesson", number: 118, mass: 294.000 }
 ]; // 无j,q
 
-
 export const customOrder: number[] = [9,92,6,19];

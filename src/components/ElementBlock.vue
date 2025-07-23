@@ -47,7 +47,7 @@ const props = defineProps<{ element: Element }>();
   color: #1976d2;
 }
 .mass {
-  font-size: 12px;
+  font-size: 10px;
   color: #888;
 }
 .symbol {
@@ -56,7 +56,7 @@ const props = defineProps<{ element: Element }>();
   color: #1976d2;
 }
 .name {
-  font-size: 12px;
+  font-size: 10px;
   color: #333;
 }
 </style> 
