@@ -17,6 +17,7 @@ export const customOrder: number[] = [9,92,6,19]; // FUCK
 ```
 
 ```js
+// src/components/ElementTable.vue
 const exportPNG = async () => {
   if (tableRef.value) {
     const canvas = await html2canvas(tableRef.value, {
