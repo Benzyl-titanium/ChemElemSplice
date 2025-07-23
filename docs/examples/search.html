@@ -23,7 +23,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
-            max-width: 550px;
+            max-width: 400px;
             text-align: center;
         }
         h1 {
@@ -52,7 +52,7 @@
             border-color: #3f51b5;
         }
         #checkButton {
-            padding: 12px 20px;
+            padding: 10px 10px;
             background-color: #3f51b5;
             color: white;
             border: none;
@@ -66,7 +66,7 @@
         }
         #result {
             margin-top: 20px;
-            padding: 20px;
+            padding:15px;
             border-radius: 8px;
             font-size: 1.1em;
             font-weight: bold;
@@ -91,13 +91,13 @@
 
     <div class="container">
         <h1>元素检查器</h1>
-        <p>输入一个单词，看看它是否能用化学元素符号及其原子序数来“拼写”出来。</p>
+        <p>输入字母，看看它是否能用化学元素符号“拼写”出来</p>
         <div class="input-group">
             <input type="text" id="drugInput" placeholder="例如: Pregabalin">
-            <button id="checkButton">检查</button>
+            <button id="checkButton"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><!-- Icon from Google Material Icons by Material Design Authors - https://github.com/material-icons/material-icons/blob/master/LICENSE --><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5A6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg></button>
         </div>
         <div id="result">
-            输出...
+            请输入字母
         </div>
     </div>
 
@@ -196,8 +196,10 @@
                 const symbolsLine = spelling.symbols.join('   ');
                 const numbersCommaLine = spelling.numbers.join(', ');
                 resultDiv.innerHTML = `
-                    <div style="font-size:1.6em;font-weight:bold;text-align:center;">${symbolsLine}</div>
-                    <div style="margin-top:8px;color:#888;font-size:1em;text-align:center;">${numbersCommaLine}</div>
+                    <div style="width:100%;display:block;">
+                        <div style="font-size:1.2em;font-weight:bold;text-align:center;">${symbolsLine}</div>
+                        <div style="color:#888;font-size:0.8em;text-align:center;">${numbersCommaLine}</div>
+                    </div>
                 `;
                 resultDiv.className = 'success';
             } else {
