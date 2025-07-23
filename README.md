@@ -1,4 +1,4 @@
-<img src="imgs/FUCK.png" alt="logo" width="40%" height="40%" align="right" />
+<img src="docs/imgs/FUCK.png" alt="logo" width="40%" height="40%" align="right" />
 
 # ChemElemSplice
 
@@ -21,7 +21,7 @@ export const customOrder: number[] = [9,92,6,19]; // FUCK
 const exportPNG = async () => {
   if (tableRef.value) {
     const canvas = await html2canvas(tableRef.value, {
-      scale: 2, // 控制清晰度
+      scale: 10, // 控制清晰度
     });
     const link = document.createElement('a');
     link.href = canvas.toDataURL('image/png');
@@ -33,8 +33,10 @@ const exportPNG = async () => {
 
 ## Examples
 
-| ![mtf](imgs/MtF.png) | ![pass](imgs/PAsS.png) |
+| ![mtf](docs/imgs/MtF.png) | ![pass](docs/imgs/PAsS.png) |
 |---|---|
-| ![氢砹锝](imgs/HAtTc.png) | ![baby](imgs/BaBY.png) |
-| ![bilibili](imgs/BiLiBiLi.png) | ![nb](imgs/NB.png) |
-| ![nice](imgs/NiCe.png) | ![omg](imgs/OMg.png) |
+| ![氢砹锝](docs/imgs/HAtTc.png) | ![baby](docs/imgs/BaBY.png) |
+| ![bilibili](docs/imgs/BiLiBiLi.png) | ![nb](docs/imgs/NB.png) |
+| ![nice](docs/imgs/NiCe.png) | ![omg](docs/imgs/OMg.png) |
+
+- [more](docs/examples/imgs)
