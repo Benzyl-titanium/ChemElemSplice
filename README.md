@@ -2,7 +2,8 @@
 
 # ChemElemSplice
 
-化学元素拼接器
+- 化学元素拼接器
+- [元素检查器: 是否能用化学元素符号“拼写”出来](https://benzyl-titanium.github.io/ChemElemSplice/examples/search.html)
 
 ## Usage
 
