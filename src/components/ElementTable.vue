@@ -3,14 +3,16 @@
     <div v-if="orderedElements.length === 0 && props.rawInput && props.rawInput.trim() !== ''" style="color: #fff; text-align: center; margin: 24px 0; font-size: 18px;">
       无法用元素符号拼写 "{{ props.rawInput }}"
     </div>
-    <div ref="tableRef" class="element-table" v-if="orderedElements.length > 0">
-      <ElementBlock
-        v-for="(el, idx) in orderedElements"
-        :key="el.number"
-        :element="el"
-        :isFirst="idx === 0"
-        :isLast="idx === orderedElements.length - 1"
-      />
+    <div v-if="orderedElements.length > 0" class="element-table-wrapper">
+      <div ref="tableRef" class="element-table">
+        <ElementBlock
+          v-for="(el, idx) in orderedElements"
+          :key="el.number"
+          :element="el"
+          :isFirst="idx === 0"
+          :isLast="idx === orderedElements.length - 1"
+        />
+      </div>
     </div>
     <div style="margin-top: 16px;" v-if="orderedElements.length > 0">
       <button @click="exportPNG">PNG</button>

@@ -132,6 +132,9 @@ updateCustomOrder();
   text-align: center;
   color: #fff;
   font-size: 16px;
+  word-break: break-all;
+  max-width: 100vw;
+  white-space: normal;
 }
 
 .input-section input {
@@ -139,7 +142,7 @@ updateCustomOrder();
   border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
-  min-width: 300px;
+  min-width: 200px;
 }
 
 .input-section input:focus {
