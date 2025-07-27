@@ -7,6 +7,8 @@ export interface Element {
 
 export const elements: Element[] = [
   { symbol: "H", name: "Hydrogen", number: 1, mass: 1.008 },
+  { symbol: "D", name: "Deuterium", number: 1, mass: 2.014 },
+  { symbol: "T", name: "Tritium", number: 1, mass: 3.016 },
   { symbol: "He", name: "Helium", number: 2, mass: 4.003 },
   { symbol: "Li", name: "Lithium", number: 3, mass: 6.940 },
   { symbol: "Be", name: "Beryllium", number: 4, mass: 9.012 },
@@ -126,4 +128,4 @@ export const elements: Element[] = [
   { symbol: "Og", name: "Oganesson", number: 118, mass: 294.000 }
 ]; // 无j,q
 
-export const customOrder: number[] = [9,92,6,19];
+export const customOrder: (number | string)[] = [1, "D", "T"];

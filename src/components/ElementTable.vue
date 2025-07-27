@@ -26,7 +26,13 @@ import domtoimage from 'dom-to-image-more';
 const tableRef = ref<HTMLElement | null>(null);
 
 const orderedElements = computed(() => {
-  return customOrder.map(num => elements.find(e => e.number === num)!).filter(Boolean);
+  return customOrder.map(item => {
+    if (typeof item === 'string') {
+      return elements.find(e => e.symbol === item);
+    } else {
+      return elements.find(e => e.number === item);
+    }
+  }).filter(Boolean);
 });
 
 const getSymbolName = () => orderedElements.value.map(e => e.symbol).join('');

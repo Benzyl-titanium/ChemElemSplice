@@ -103,7 +103,7 @@
 
     <script>
         const elementData = {
-            'h': { number: 1 }, 'he': { number: 2 }, 'li': { number: 3 }, 'be': { number: 4 }, 'b': { number: 5 },
+            'h': { number: 1, symbol: 'H' }, 'd': { number: 1, symbol: 'D' }, 't': { number: 1, symbol: 'T' }, 'he': { number: 2, symbol: 'He' }, 'li': { number: 3, symbol: 'Li' }, 'be': { number: 4, symbol: 'Be' }, 'b': { number: 5, symbol: 'B' },
             'c': { number: 6 }, 'n': { number: 7 }, 'o': { number: 8 }, 'f': { number: 9 }, 'ne': { number: 10 },
             'na': { number: 11 }, 'mg': { number: 12 }, 'al': { number: 13 }, 'si': { number: 14 }, 'p': { number: 15 },
             's': { number: 16 }, 'cl': { number: 17 }, 'ar': { number: 18 }, 'k': { number: 19 }, 'ca': { number: 20 },
@@ -194,7 +194,15 @@
 
             if (spelling) {
                 const symbolsLine = spelling.symbols.join('   ');
-                const numbersCommaLine = spelling.numbers.join(', ');
+                const displayNumbers = spelling.numbers.map((num, index) => {
+                    if (num === 1) {
+                        const symbol = spelling.symbols[index];
+                        if (symbol === 'D') return '"D"';
+                        if (symbol === 'T') return '"T"';
+                    }
+                    return num;
+                });
+                const numbersCommaLine = displayNumbers.join(', ');
                 resultDiv.innerHTML = `
                     <div style="width:100%;display:block;">
                         <div style="font-size:1.2em;font-weight:bold;text-align:center;">${symbolsLine}</div>
