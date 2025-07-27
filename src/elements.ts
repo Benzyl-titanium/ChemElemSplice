@@ -128,4 +128,4 @@ export const elements: Element[] = [
   { symbol: "Og", name: "Oganesson", number: 118, mass: 294.000 }
 ]; // 无j,q
 
-export const customOrder: (number | string)[] = [74, 53, 19, 53];
+export const customOrder: (number | string)[] = [59, 8, "D", 92, 6, "T"];
