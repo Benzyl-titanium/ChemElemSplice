@@ -143,6 +143,22 @@
                 return { symbols: [], numbers: [] };
             }
 
+            const oneLetterSymbol = word.substring(0, 1);
+            if (elementData[oneLetterSymbol]) {
+                const restOfWord = word.substring(1);
+                const result = findElementalSpelling(restOfWord);
+                if (result !== null) {
+                    const formattedSymbol = oneLetterSymbol.toUpperCase();
+                    const atomicNumber = elementData[oneLetterSymbol].number;
+                    const finalResult = {
+                        symbols: [formattedSymbol, ...result.symbols],
+                        numbers: [atomicNumber, ...result.numbers]
+                    };
+                    memo.set(word, finalResult);
+                    return finalResult;
+                }
+            }
+
             if (word.length >= 2) {
                 const twoLetterSymbol = word.substring(0, 2);
                 if (elementData[twoLetterSymbol]) {
@@ -161,21 +177,6 @@
                 }
             }
 
-            const oneLetterSymbol = word.substring(0, 1);
-            if (elementData[oneLetterSymbol]) {
-                const restOfWord = word.substring(1);
-                const result = findElementalSpelling(restOfWord);
-                if (result !== null) {
-                    const formattedSymbol = oneLetterSymbol.toUpperCase();
-                    const atomicNumber = elementData[oneLetterSymbol].number;
-                    const finalResult = {
-                        symbols: [formattedSymbol, ...result.symbols],
-                        numbers: [atomicNumber, ...result.numbers]
-                    };
-                    memo.set(word, finalResult);
-                    return finalResult;
-                }
-            }
             memo.set(word, null);
             return null;
         }
