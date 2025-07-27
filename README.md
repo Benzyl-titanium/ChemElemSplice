@@ -14,7 +14,7 @@ npm run dev
 
 ```ts
 // src/elements.ts
-export const customOrder: number[] = [9,92,6,19]; // FUCK
+export const customOrder: (number | string)[] = [59, 8, "D", 92, 6, "T"]; // product 氘 "D" 和氚 "T"
 ```
 
 ```js
