@@ -79,7 +79,7 @@ const exportPNG = async () => {
   box-shadow: 0 2px 8px #e0e0e0;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 0px;
 }
 button {
   padding: 8px 16px;
