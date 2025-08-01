@@ -29,39 +29,46 @@ const props = defineProps<{ element: Element }>();
   border: 2px solid #1976d2;
   border-radius: 8px;
   margin: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background: #fff;
   box-shadow: 2px 2px 8px #e0e0e0;
   padding: 4px;
   box-sizing: border-box;
 }
 .top-row {
-  width: 100%;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2px;
-  padding: 0 0px;
 }
 .number {
   font-size: 14px;
   color: #1976d2;
 }
 .mass {
-  font-size: 10px;
+  font-size: 12px;
   color: #888;
 }
 .symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 32px;
   font-weight: bold;
   color: #1976d2;
 }
 .name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  right: 0px;
   font-size: 10px;
   color: #333;
+  text-align: center;
 }
 </style> 
