@@ -119,6 +119,7 @@
     { "symbol": "Mc", "name": "Moscovium", "number": 115, "mass": 290.000 },
     { "symbol": "Lv", "name": "Livermorium", "number": 116, "mass": 293.000 },
     { "symbol": "Ts", "name": "Tennessine", "number": 117, "mass": 294.000 },
-    { "symbol": "Og", "name": "Oganesson", "number": 118, "mass": 294.000 }
+    { "symbol": "Og", "name": "Oganesson", "number": 118, "mass": 294.000 },
+    { "symbol": "X", "name": "Halogen", "number": "VIIA", "mass": "xxx" }
   ]
 } 
