@@ -138,7 +138,11 @@ const orderedElements = computed(() => {
     if (mode.value === 'minimal') {
       return findMinimalSpelling(props.rawInput);
     } else {
-      return findMaximalSpelling(props.rawInput);
+      const maximalResult = findMaximalSpelling(props.rawInput);
+      if (maximalResult.length === 0) {
+        return findMinimalSpelling(props.rawInput);
+      }
+      return maximalResult;
     }
   } else {
     return props.customOrder.map((item: number | string) => {
