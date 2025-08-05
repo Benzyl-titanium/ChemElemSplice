@@ -12,12 +12,7 @@
 </template>
 
 <script lang="ts" setup>
-interface Element {
-  symbol: string;
-  name: string;
-  number: number;
-  mass: number | null;
-}
+import type { Element } from '../types/element';
 
 const props = defineProps<{ element: Element }>();
 </script>

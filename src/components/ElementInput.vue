@@ -14,13 +14,7 @@
 <script lang="ts" setup>
 import { ref, computed, watch } from 'vue';
 import elementsData from '../assets/elements.json';
-
-interface Element {
-  symbol: string;
-  name: string;
-  number: number;
-  mass: number | null;
-}
+import type { Element } from '../types/element';
 
 const elements: Element[] = elementsData.elements;
 

@@ -5,6 +5,11 @@
 - [化学元素拼接器](https://chemelemsplice.pages.dev)
 - 输入字母，看看它是否能用化学元素符号"拼写"出来
 
+## Demo
+
+| ![short](docs/imgs/short.png) | ![long](docs/imgs/long.png) |
+|---|---|
+
 ## Examples
 
 | ![mtf](docs/imgs/MtF.png) | ![pass](docs/imgs/PAsS.png) |
