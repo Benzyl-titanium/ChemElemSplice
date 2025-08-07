@@ -3,7 +3,7 @@
     <div v-if="orderedElements.length === 0 && props.rawInput && props.rawInput.trim() !== ''" style="color: #fff; text-align: center; margin: 24px 0; font-size: 18px;">
       无法用元素符号拼写 "{{ props.rawInput }}"
     </div>
-    <div v-if="orderedElements.length > 0" class="element-table-wrapper">
+    <div class="fixed-controls" v-if="orderedElements.length > 0">
       <div class="mode-switch">
         <button 
           @click="setMode('minimal')" 
@@ -20,6 +20,7 @@
           长
         </button>
       </div>
+      <div v-if="orderedElements.length > 0" class="element-table-wrapper">
       <div ref="tableRef" class="element-table">
         <ElementBlock
           v-for="(el, idx) in orderedElements"
@@ -30,7 +31,6 @@
         />
       </div>
     </div>
-    <div style="margin-top: 16px;" v-if="orderedElements.length > 0">
       <button @click="exportPNG">PNG</button>
     </div>
   </div>
@@ -218,6 +218,7 @@ const exportPNG = async () => {
 
 button {
   padding: 8px 16px;
+  margin-top: 8px;
   background: #1976d2;
   color: #fff;
   border: none;
