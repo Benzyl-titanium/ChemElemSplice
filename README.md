@@ -20,7 +20,7 @@
 
 - [more](docs/examples/imgs)
 
-## 实物（支持定制）
+## 实物
 
 ![实物](docs/imgs/matter.jpg)
 
